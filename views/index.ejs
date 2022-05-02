@@ -1,0 +1,25 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+ 
+    <tbody>
+        <% for (var a = 0; a < users.length; a++) { %>
+        <tr>
+            <td><%= users[a].name || 'admin'  %></td>
+            <td><%= users[a].age  %></td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+ 
+<ul class="pagination">
+    <% for (var a = 1; a <= pages; a++) { %>
+    <li>
+        <a href="?page=<%= a; %>">
+            <%= a; %>
+        </a>
+    </li>
+    <% } %>
+</ul>
